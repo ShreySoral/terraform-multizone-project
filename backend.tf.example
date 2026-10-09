@@ -1,0 +1,10 @@
+# Rename to backend.tf after creating the bucket; use your unique bucket name.
+terraform {
+  backend "s3" {
+    bucket = "REPLACE_WITH_YOUR_UNIQUE_BUCKET"
+    key = "terraform-aws-portfolio/dev/terraform.tfstate"
+    region = "eu-west-1"
+    encrypt = true
+    use_lockfile = true
+  }
+}
